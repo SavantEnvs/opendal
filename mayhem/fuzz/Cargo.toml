@@ -1,0 +1,20 @@
+[package]
+name = "opendal-fuzz-reader-range"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[package.metadata]
+cargo-fuzz = true
+
+[workspace]
+
+[dependencies]
+libfuzzer-sys = "0.4"
+opendal = { path = "../../core", features = ["tests", "services-memory"] }
+
+[[bin]]
+name = "fuzz_reader_range"
+path = "fuzz_reader_range.rs"
+test = false
+doc = false

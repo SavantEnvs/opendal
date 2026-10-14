@@ -1,0 +1,10 @@
+# seed-from: https://app.mayhem.security/savantenvs/opendal/fuzz-reader
+project: savantenvs/opendal
+target: fuzz_reader_range-mined-5207106
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_reader_range-mined-5207106/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_reader_range
+    libfuzzer: true
